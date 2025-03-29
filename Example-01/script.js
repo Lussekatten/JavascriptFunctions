@@ -32,10 +32,11 @@ console.log(output);
 //Using the "argumets object", a function can be declared to accept any number of arguments when it is invoked
 //Normally, you would use this feature when you need to treat the same kind of data types with an unknown number
 //of arguments.
+//The "argumets object" has an iterrator but is not a full fledged array structure (lacks many array methods like sort(), filter() and map())
 function sumOfAny() {
     let sum = 0;
     for (let index = 0; index < arguments.length; index++) {
-        sum += arguments[index];
+        sum += arguments[index]; //+= is not the same as =+ Try it!
     }
     return sum;
 }
