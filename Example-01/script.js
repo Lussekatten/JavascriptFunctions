@@ -41,7 +41,20 @@ function sumOfAny() {
     return sum;
 }
 
-let result = sumOfAny(1, 2, 3, 4, 5, 6, 7, 8, 9, 10); 
+let result = sumOfAny(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 console.log(result);
+
+//So called "Rest parameters" can also be passed to a function.
+//They must be used LAST, in the parameter order
+function add(...theArgs) {
+    let argSum = theArgs.reduce(function (sum, val) {
+        return sum + val;
+    })
+    return argSum;
+}
+
+result = add(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+console.log(result);
+
 console.log('-- the End ---');
 $('#output').innerHTML = output
